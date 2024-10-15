@@ -14,9 +14,9 @@ public class App {
 
         // Busqueda Secuencial
         long startTimeS = System.nanoTime();
-        int posicion = mB.busquedaSecuencial(arreglo, valorBuscado);
-        if (posicion != -1) {
-            System.out.println("El valor se encuentra en la posicion: " + posicion);
+        int posicionS = mB.busquedaSecuencial(arreglo, valorBuscado);
+        if (posicionS != -1) {
+            System.out.println("El valor "+valorBuscado+" se encuentra en la posicion: "+ posicionS);
         } else {
             System.out.println("El valor no se ha encontrado 404");
         }
@@ -26,14 +26,14 @@ public class App {
 
         //Busqueda Binaria
         long startTimeB = System.nanoTime();
-        int posi = mB.busquedaBinaria(arreglo, 50418);
-        if (posi != -1) {
-            System.out.println("El valor se encuentra en la posicion: " + posi);
+        int posicionB = mB.busquedaBinaria(arreglo, valorBuscado);
+        if (posicionB != -1) {
+            System.out.println("El valor "+valorBuscado+" se encuentra en la posicion: " + posicionB);
         } else {
             System.out.println("El valor no se ha encontrado 404");
         }
         long endTimeB = System.nanoTime();
         long totalTimeB = endTimeB - startTimeB;
-        System.out.println("Tiempo de ejecucion metodo Secuencial "+totalTimeB+" nanosegundos");
+        System.out.println("Tiempo de ejecucion metodo Binario "+totalTimeB+" nanosegundos");
     }
 }
